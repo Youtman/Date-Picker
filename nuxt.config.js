@@ -14,14 +14,24 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/css/bootstrap.min.css' },
+      { rel: 'stylesheet', href: '/css/style.css' },
+    ],
+    script: [
+      {
+        src: '/js/bootstrap.bundle.min.js',
+        type: 'text/javascript',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-datepicker', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
